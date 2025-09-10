@@ -1,7 +1,7 @@
-/* const dialog = document.querySelector(".dialogBox");
-const dialogImg = document.querySelector(".dialogImg");
-const openBtn = document.querySelectorAll(".openDialog");
-const closeBtn = document.querySelector(".closeBtn"); */
+# /* const dialog = document.querySelector(".dialogBox");
+# const dialogImg = document.querySelector(".dialogImg");
+# const openBtn = document.querySelectorAll(".openDialog");
+# const closeBtn = document.querySelector(".closeBtn"); */
 
 const galleryContainer = document.querySelector(".gallery-container");
 

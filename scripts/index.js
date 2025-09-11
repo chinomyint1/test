@@ -1,5 +1,7 @@
 import { footer } from "./component/footer.js";
-import { gallery } from "./component/gallery.js";
+import { galleryTmpl } from "./component/gallery.js";
+import { productgruppe } from "./component/productgruppe.js";
 
+productgruppe();
 footer();
-gallery();
+galleryTmpl();

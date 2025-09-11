@@ -1,20 +1,37 @@
-const images = [
-    "../assets/img/slider/hero_img.jpg",
-    "../assets/img/slider/hero_img2.jpg",
-    "../assets/img/slider/hero_img3.jpg"
-];
+const sliderContainer = document.querySelector(".slider-container");
 
-let index = 0;
-const slideshow = document.getElementById("slideshow");
+export const sliderTmpl = () => {
+  return `
+    <div class="slider-wrapper">
+      <img id="slideshow" src="assets/img/slider/hero_img.jpg" alt="Slideshow image" class="slider-img" />
+      <div class="slider-text">
+        <h1>Vi stræber efter at skabe en unik shoppingoplevelse, hvor elegance møder funktionalitet</h1>
+      </div>
+    </div>
+  `;
+};
 
-function nextImage() {
-    slideshow.classList.add("fade-out");
+export const slider = () => {
+  if (sliderContainer) {
+    sliderContainer.insertAdjacentHTML("beforeend", sliderTmpl());
 
-    setTimeout(() => {
+    const images = [
+      "assets/img/slider/hero_img.jpg",
+      "assets/img/slider/hero_img2.jpg",
+      "assets/img/slider/hero_img3.jpg",
+    ];
+
+    let index = 0;
+    const slideshow = document.getElementById("slideshow");
+
+    function nextImage() {
+      setTimeout(() => {
         index = (index + 1) % images.length;
         slideshow.src = images[index];
-        slideshow.classList.remove("fade-out");
-    }, 1000);
-}
+      }, 1000);
+    }
 
-setInterval(nextImage, 3000);
+    // Start the slideshow
+    setInterval(nextImage, 3000);
+  }
+};
